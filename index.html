@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeduRyde | Your Reliable Taxi Service</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaqueries.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+</head>
+<body>
+    <!-- Header Nav and Background image -->
+    <div id="hero" style="background-image: url('Assets/Images/Car-image-png.jpg');">
+        <div class="hero-topbar">
+            <div class="logo">
+                <i class="fas fa-car"></i> GeduRyde
+            </div>
+            <nav>
+                <!-- Hamburger icon (visible on mobile) -->
+                <i class="fa fa-bars" id="menu-bars"></i>
+                <ul id="nav-list">
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                    <li><a href="#contact">Contact</a></li>
+
+                    <!-- Close icon inside menu (visible on mobile) -->
+                    <li class="close-li"><i class="fa fa-times" id="close-nav"></i></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Hero Content and Booking Form -->
+        <div id="hero-main">
+            <div class="hero-content">
+                <h1>VÄLKOMMEN till GeduRyde</h1>
+                <p>Experience a taxi service that offers safe, comfortable, 
+                and timely transportation for all your travel needs.</p>
+                <div class="hero-cta">
+                    <a href="#contact" class="btn-primary">Book Now</a>
+                    <a href="tel:+46764369630" class="btn-secondary">Call Us</a>
+                </div>
+            </div>
+            <form class="hero-book-form">
+                <h2>Book Your Ride</h2>
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="Email" required>
+                <input type="tel" placeholder="Phone Number" required>
+                <input type="text" placeholder="Pickup Location" required>
+                <input type="text" placeholder="Destination Location" required>
+                <button type="submit">Book Now</button>
+            </form>
+        </div>
+    </div>
+    <div class="scroll-down">
+        <a href="#"><i class="ri-arrow-down-fill"></i></a>
+    </div>
+
+    <!-- Services Section -->
+    <section id="services">
+        <h2>Our Services</h2>
+        <p>We provide reliable, on-demand taxi services tailored to your schedule.</p>
+        
+        <div class="row">
+            <div class="service-item">
+                <img src="Assets/Images/car-image-png3.webp" alt="On-Demand Rides" class="service-img">
+                <h3>On-Demand Rides</h3>
+                <p>Book a ride anytime, anywhere with our easy-to-use app.</p>
+            </div>
+            <div class="service-item">
+                <img src="Assets/Images/car-image-png1.webp" alt="Safety First" class="service-img">
+                <h3>Safety First</h3>
+                <p>Your safety is our priority. All drivers are vetted and trained.</p>
+            </div>
+            <div class="service-item">
+                <img src="Assets/Images/car-image-png2.webp" alt="Timely Service" class="service-img">
+                <h3>Timely Service</h3>
+                <p>We ensure prompt pickups and drop-offs to keep you on schedule.</p>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section   -->
+
+    <section id="cta" style="background-image: url(Assets/Images/car-image.png4.png);">
+        <h2>Ready to Ride?</h2>
+        <p>Contact us now or book a ride online in seconds!</p>
+        <a href="#contact" class="btn-primary">Get Started</a>
+    </section>
+
+   <!--- Gallery section --->
+
+    <section id="gallery">
+        <h2> Our Vehicles</h2>
+        <p>Our experience drivers and well-maintained vehicles are here to get you quickly 
+        to your destination.</p>
+         <div class="gallery-col">
+            <img src="Assets/Images/car-image-png1.webp" alt="Taxi 1">
+           
+            <img src="Assets/Images/car-image.png4.png" alt="Taxi 2">
+        
+            <img src="Assets/Images/car-image-png3.webp" alt="Taxi 3">
+
+            <img src="Assets/Images/car-image-png2.webp" alt="Taxi 4">
+
+            <img src="Assets/Images/Car-image-png.jpg" alt="Taxi 5">
+
+            <img src="Assets/Images/car-image-png5.webp" alt="Taxi 6">
+        </div>
+    </section>
+
+    <!-- Mobile menu toggle script -->
+    <script>
+      const menuBars = document.getElementById('menu-bars');
+      const navList = document.getElementById('nav-list');
+      const closeNav = document.getElementById('close-nav');
+
+      menuBars.onclick = () => {
+        navList.classList.add('active');
+      };
+
+      closeNav.onclick = () => {
+        navList.classList.remove('active');
+      };
+    </script>
+</body>
+</html>
