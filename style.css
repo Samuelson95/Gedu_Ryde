@@ -8,7 +8,13 @@ body {
     background-color: white;
     min-height: 100vh;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
 /* Hero Section style*/
+
 #hero {
     position: relative;
     display: flex;
@@ -31,6 +37,7 @@ body {
     background: transparent;
 }
 /* Hero content and form */
+
 #hero-main {
     display: flex;
     flex-direction: row;
@@ -99,26 +106,8 @@ body {
     background: transparent;
 }
 
-.scroll-down {
-    position: absolute;
-    bottom: 12%;
-    right: 4%;
-}
-.scroll-down i {
-    display: block;
-    padding: 12px;
-    font-size: 25px;
-    color: #fff;
-    background:#6366f1;
-    border-radius: 30px;
-    transition: all .50s ease;
-}
+/* This is for the overlay in the Hero section */
 
-.scroll-down i:hover {
-    transform: translateY(-5px);
-}
-
-/* To make the overlay readable */
 #hero::before {
     content: "";
     position: absolute;
@@ -197,7 +186,7 @@ nav ul li a {
     color: #eaf6ff;
     text-shadow: 0 2px 8px rgba(0,0,0,0.18);
     line-height: 1.75;
-}
+} 
 
 .hero-cta {
     display: flex;
@@ -263,20 +252,20 @@ nav .fa {
 }
 #services p {
     font-size: 14px;
-    font-weight: 300;
+    font-weight: 400;
     line-height: 22px;
-    padding: 30px 0 30px 0;
+    padding: 10px 0;
     color: #1e293b !important;
     display: block;
     text-align: center;
 }
 
 .row {
-    margin-top: 5%;
     display: flex;
     justify-content: center;
-    gap: 24px;
-    width: 80%;
+    gap: 30px;
+    width: 90%;
+    margin-top: 5%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -314,7 +303,7 @@ nav .fa {
 
 #cta {
     width: 80%;
-    min-height: 400px;
+    min-height: 480px;
     margin: auto;
     text-align: center;
     display: flex;
@@ -322,91 +311,117 @@ nav .fa {
     justify-content: center;
     align-items: center;
     margin-bottom: 100px;
-    border-radius: 5px;
+    border-radius: 8px;
 }
+
 #cta h2 {
-font-size: 36px;
-font-weight: 600;
-color: #1e293b !important;
-margin-bottom: 16px;
+    font-size: 36px;
+    font-weight: 600;
+    color:#eaf6ff;
+    margin-bottom: 10px;
 }
+
 #cta p {
     font-size: 14px;
-    font-weight: 300;
+    font-weight: 400;
     line-height: 22px;
     padding: 10px 0 30px 0;
-    color: #1e293b !important;
+    color: #eaf6ff;
 }
 
 /*--- gallery ---*/
 
 #gallery {
-    padding-top: 30px 0;
+    padding: 30px 0;
     text-align: center;
 }
+
 #gallery h2 {
     font-size: 36px;
     font-weight: 600;
     color: #1e293b !important;
     margin-bottom: 16px;
 }
+
 #gallery p {
     font-size: 14px;
-    font-weight: 300;
+    font-weight: 400;
     line-height: 22px;
-    padding: 10px 0 30px 0;
+    padding: 10px 0 50px;
     color: #1e293b !important;
 }
+
 .gallery-col {
    display: grid;
    grid-template-columns: repeat(3, 1fr);
-   gap: 24px;
+   gap: 30px;
    max-width: 1100px;
    margin: 0 auto;
 }
+
 .gallery-col img {
     width: 100%;
-    height: 250px;
+    height: 200px;
     object-fit: cover;
     border-radius: 12px;
     box-shadow: 0 2px 12px rgba(0,0,0,0.10);
     transition: transform 0,3s cubic-bezier(.4,2.6,1), box-shadow 0.3s;
 }
+
 .gallery-col img:hover {
     transform: scale(1.06);
     box-shadow: 0 8px 32px rgba(99,102,241,0.18);
 }
 
-/* Testimonials Section*/
+/* This is Testimonials Section*/
+
 #reviews {
-    width: 80%;
+    width: 90%;
     margin: auto;
     padding-top: 100px;
     text-align: center;
 }
-.testimonial-col {
-    flex-basis: 31px;
-    border-radius: 10px;
-    margin-bottom: 5%;
-    text-align: left;
-    background: #fff3f3;
-    padding: 25px;
-    cursor: pointer;
-    display: flex;
+
+#reviews h2 {
+    font-size: 36px;
+    font-weight: 600;
+    color: #1e293b !important;
+    margin-bottom: 16px;
 }
+
+#reviews p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    padding: 10px 0 20px;
+    color: #1e293b !important;
+}
+
+.testimonial-col {
+    display: flex;
+    margin-bottom: 5%;
+    padding: 25px;
+    text-align: left;
+    border-radius: 10px;
+    background: #fff3f3;
+    cursor: pointer;
+}
+
 .testimonial-col img {
-    height: 40px;
-    margin-right: 30px;
+    height: 60px;
     margin-left: 5px;
+    margin-right: 30px;
     border-radius: 50%;
 }
-.testimonial-col p{
-    padding: 0;
-}
+
 .testimonial-col h3 {
-    margin-top: 15px;
-    text-align: left;
+  margin-top: 5px;
+  text-align: left;
+  margin-bottom: 10px;
 }
-.testimonial-col .fa{
-    color: #f44336;
+
+.testimonial-col i {
+    color: #f2766d;
 }
+
+
