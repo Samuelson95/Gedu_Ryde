@@ -1,105 +1,156 @@
-/* Responsive styles for mobile screens */
+/* This is for the Mobile responsiveness */
+/*    I am still working on Toggle Menu */
 
-@media (max-width: 768px) {
-  .hero {
-    min-height: 90vh;
-    padding-bottom: 10px;
+
+@media(max-width: 768px) {
+  body {
+    overflow-x: hidden;
   }
 
-  .hero-topbar {
-    flex-direction: column;
-    align-items: center;
-    padding: 20px 16px 0 16px;
-  }
-
-  .logo {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-  }
-
-  .hero-topbar nav ul {
+  nav ul {
     position: fixed;
     top: 0;
     right: -100%;
-    width: 70vw;
-    height: 100vh;
-    background: #222;
+    width: 60vw;
+    height: 70vh;
+    background-color: #1e293b;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 20px;
-    margin-top: 0;
-    padding: 60px 20px 20px 20px;
-    transition: right 0.98s ease;
     z-index: 1000;
+    transition: right 0.3s ease-in-out;
+    padding-top: 40px;
   }
 
-  .hero-topbar nav ul.active {
+  nav ul.active {
     right: 0;
   }
 
-  .hero-main {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 30px;
-    padding: 40px 16px 0 16px;
+  nav ul li {
+    margin: 10px 0;
   }
 
-  .hero-content {
-    max-width: 100%;
-    text-align: left;
+  #menu-bars {
+    display: block;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  #close-nav {
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  #nav-list .close-li {
+    display: none;
+  }
+
+#nav-list.active .close-li {
+  display: block;
+  text-align: right;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+
+  #hero-main {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .hero-content,
+  .hero-book-form {
+    width: 100%;
+  }
+
+  .hero-content h1 {
+   font-size: 30px;
+   margin-top: 30px;
   }
 
   .hero-book-form {
-    width: 100%;
-    margin: 0;
+    margin-top: 30px;
   }
 
-  .hero-cta {
+
+  .row {
     flex-direction: column;
-    gap: 12px;
+    align-items: center;
   }
 
-  .btn-primary, .hero-cta .btn-secondary {
-    width: 30%;
-    padding: 12px 15 ;
-    font-size: 1rem;
+  .service-item {
+    width: 100%;
+    max-width: 90%;
+    margin-bottom: 30px;
+  }
+
+  #cta {
+    padding: 40px 20px;
     text-align: center;
   }
 
-  nav .fa {
-    display: block;
-    color: #fff;
-    margin: 10px;
-    font-size: 25px;
-    cursor: pointer;
-    z-index: 1001;
+  #cta h2 {
+    font-size: 24px;
   }
-  .row {
-    flex-direction: column;
-    gap: 20px;
-  }
-  
-}
 
-@media (max-width: 480px) {
-  .hero-content h1 {
-    font-size: 1.6rem;
+  #cta p {
+    font-size: 16px;
   }
-  .hero-content p {
-    font-size: 1rem;
-  }
-  .btn-primary, .btn-secondary {
-    padding: 10px 18px;
-    font-size: 0.95rem;
-  }
-}
 
-@media (max-width: 900px) {
-  .gallery-col {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (max-width: 600px) {
   .gallery-col {
     grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0 10px;
+  }
+
+  .testimonial-col {
+    flex-direction: column;
+    text-align: left;
+    margin-bottom: 30px;
+  }
+
+  .testimonial-col img {
+    margin-bottom: 10px;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  .contact-container {
+    flex-direction: column;
+    gap: 30px;
+    padding: 0 20px;
+  }
+
+  .contact-col {
+    width: 100%;
+  }
+
+  .contact-col p {
+    font-size: 16px;
+  
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .footer-col {
+    width: 100%;
+  }
+
+  .footer-links,
+  .footer-socials {
+    justify-content: center;
+    padding: 0;
   }
 }
