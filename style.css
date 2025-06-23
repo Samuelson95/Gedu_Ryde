@@ -143,7 +143,7 @@ nav ul li a {
 
 .logo {
     font-size: 2rem;
-    font-weight: 500; 
+    font-weight: 400; 
 }
 
 .menu-toggle {
@@ -172,12 +172,21 @@ nav ul li a {
     color:#fff;
     text-decoration: none;
     font-size: 1rem;
-    font-weight: 500;
+    font-weight: 400;
 }
 
-.hero-topbar nav ul li a:hover {
-    color: #6366f1;
-    transition: all 1s;
+.hero-topbar nav ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #6366f1;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.hero-topbar nav ul li:hover::after {
+    width: 100%;
 }
 
 /* Hero content Section */
@@ -545,7 +554,7 @@ margin-bottom: 15px;
 
 .footer-col p {
     font-size: 16px;
-    margin-bottom: 8px;
+    margin-bottom: 12px;
 }
 
 .footer-col p .fas {
@@ -563,8 +572,9 @@ margin-bottom: 15px;
     color: #fff;
     text-decoration: none;
     font-size: 16px;
-    margin-bottom: 8px;
-    transition: color 0.3s, transform 0.3s;
+    margin-bottom: 12px;
+    transition: color 0.3s ease;
+
 }
 .footer-links li a:hover {
     color:#6366f1;
@@ -604,4 +614,14 @@ margin-bottom: 15px;
     padding: 18px 0;
     font-size: 16px;
     margin-top: 10px;
+}
+
+.footer-bottom p a {
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    transition: 0.5s;
+}
+.footer-bottom p a:hover {
+    color: #6366f1;
 }
